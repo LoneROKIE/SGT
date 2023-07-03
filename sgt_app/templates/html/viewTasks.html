@@ -1,0 +1,32 @@
+{% extends 'html/base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas</title>
+</head>
+<body>
+    
+    <!-- aca voy a ver a ver las tareas, y si no hay tareas entonces voy a poner
+        un mensaje que diga "no hay tareas para mostrar"  usando python
+    -->
+    <h1>Lista de tareas</h1>
+    <ul>
+        {% for tarea in tareas %}
+            <li>
+                {{ tarea }}
+                <a href="{% url 'editarTarea' tarea.id %}">Editar</a>
+            </li>
+        <!-- este es un for empty -->
+        {% empty %}
+            <li>No hay tareas para mostrar</li>
+        {% endfor %}
+        
+    </ul>
+    
+
+</body>
+</html>
+{% endblock %}

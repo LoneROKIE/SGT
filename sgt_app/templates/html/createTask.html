@@ -1,0 +1,47 @@
+{% extends 'html/base.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Tarea</title>
+</head>
+<body>
+    <h1>Crear Tarea</h1>
+        <div>
+            <form method="post" action="{% url 'crearTarea'%}">
+                <!--nombre de la tarea
+                    descripcion
+                    fecha de inicio
+                    fecha de finalizacion
+                    estado
+                -->
+                {% csrf_token %}
+                <label for="nombreTarea">Nombre de la Tarea</label>    
+                <input type="text" name="nombreTarea" id="nombreTarea">
+
+                <label for="descripcionTarea">Descripcion de la Tarea</label>
+                <textarea name="descripcionTarea" id="descripcionTarea" cols="30" rows="10" placeholder="Descripcion...."></textarea>
+
+                <label for="fechaInicio">Fecha de inicio</label>
+                <input type="date" name="fechaInicio" id="fechaInicio">
+
+                <label for="fechaFinalizacion">Fecha de Finalizacion</label>
+                <input type="date" name="fechaFinalizacion" id="fechaFinalizacion">
+
+                <label for="estadoTarea">Estado de la Tarea</label>
+                <input type="radio" id="completada" name="estado" value="completada">
+                <label for="completada">Completada</label>
+                <input type="radio" id="incompleta" name="estado" value="incompleta" checked>
+                <label for="incompleta">Incompleta</label>
+                
+                
+                
+                <input type="submit" value="Crear Tarea">
+                
+            </form>
+        </div>
+</body>
+</html>
+{% endblock %}

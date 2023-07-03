@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nombre de tu sitio web</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'ver_tareas' %}">Ver Tareas</a></li>
+            <li><a href="{% url 'crearTarea' %}">Crear Tarea</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
