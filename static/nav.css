@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background-color: #f0f0f0;
+}
+
+.lista {
+    list-style: none;
+    display: flex;
+}
+
+.item {
+    margin: 0 20px;
+}
+
+.enlace {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.enlace:hover {
+    color: #555;
+}

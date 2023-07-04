@@ -1,30 +1,52 @@
 {% extends 'html/base.html' %}
+
+
+
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="static/paginaMain.css">
+
     <title>Tareas</title>
 </head>
 <body>
     
-    <!-- aca voy a ver a ver las tareas, y si no hay tareas entonces voy a poner
-        un mensaje que diga "no hay tareas para mostrar"  usando python
-    -->
-    <h1>Lista de tareas</h1>
-    <ul>
-        {% for tarea in tareas %}
-            <li>
-                {{ tarea }}
-                <a href="{% url 'editarTarea' tarea.id %}">Editar</a>
-            </li>
-        <!-- este es un for empty -->
-        {% empty %}
-            <li>No hay tareas para mostrar</li>
-        {% endfor %}
-        
-    </ul>
+    <div class="container">
+        <h1 class="title">Lista de tareas</h1>
+        <ul class="list">
+            {% for tarea in tareas %}
+                <li class="ite">
+                    <p>Titulo:</p>
+                    
+                    {{ tarea.nombre }}
+                    <br>
+                    <p>Descripcion:</p>
+                    {{ tarea.descripcion }}
+                    <br>
+                    <p>Fecha Creacion:</p>
+                    {{ tarea.fecha_creacion }}
+                    <br>
+                    <p>Fecha vencimiento:</p>
+                    {{ tarea.fecha_vencimiento }}
+                    <br>
+                    <p>Estado:</p>
+                    {{ tarea.estado }}
+                    <br>
+                    <a class="link" href="{% url 'editarTarea' tarea.id %}">EDITAR TAREA</a>
+                </li>
+            <!-- este es un for empty -->
+            {% empty %}
+                <p class="linkNoTareas">No hay Tareas para mostrar,  <a class="linkNoTareas" href="{% url 'crearTarea' %}">click aqui</a>
+                    para crear una tarea  </p>
+                
+            {% endfor %}
+            
+        </ul>
+    </div>
     
 
 </body>

@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+label {
+    margin-top: 10px;
+    margin: 10px;
+}
+
+input[type="text"],
+textarea,
+input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: #fff;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    margin-right: 1px;
+    vertical-align: middle;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}

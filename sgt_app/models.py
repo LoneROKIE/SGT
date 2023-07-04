@@ -13,4 +13,4 @@ class Tarea(models.Model):
     )
     estado = models.CharField(max_length=10, choices=ESTADO_CHOICES, default='incompleta')
     def __str__(self):
-        return f"Tarea: {self.nombre}, {self.descripcion}, {self.fecha_creacion}, {self.fecha_vencimiento}, {self.estado}"
+        return f"Tarea: \nTitulo: {self.nombre},\nDescripcion: {self.descripcion},\nFecha Creacion: {self.fecha_creacion},\nFecha Vencimiento: {self.fecha_vencimiento},\nEstado: {self.estado}"

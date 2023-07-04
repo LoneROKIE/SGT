@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Nombre de tu sitio web</title>
+    <link rel="stylesheet" href="static/nav.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="{% url 'ver_tareas' %}">Ver Tareas</a></li>
-            <li><a href="{% url 'crearTarea' %}">Crear Tarea</a></li>
+    <nav class="menu">
+        <ul class="lista">
+            <li class="item"><a class="enlace" href="{% url 'ver_tareas' %}">Ver Tareas</a></li>
+            <li class="item"><a class="enlace" href="{% url 'crearTarea' %}">Crear Tarea</a></li>
         </ul>
     </nav>
 
