@@ -16,3 +16,6 @@
 <h2> Pagina para editar una tarea </h2>
 
 ![pantallaEditarTareas](https://github.com/LoneROKIE/SGT/assets/96219296/920616e4-a94f-4a1a-9d33-c40f9fc7b0e1)
+
+<h3> Notas </h3>
+<p>Aun falta agregar algunas cosas como validaciones y una opcion para eliminar tareas</p>
